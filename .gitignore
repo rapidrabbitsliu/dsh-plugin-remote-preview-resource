@@ -1,0 +1,11 @@
+node_modules/
+media/
+tasks/
+artifacts/
+.npm-cache/
+.npmrc
+.env
+.env.*
+*.log
+*.tgz
+remote-preview.patch.yml

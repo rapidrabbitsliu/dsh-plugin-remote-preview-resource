@@ -1,0 +1,6 @@
+# Configure mediaRoot and publicBaseUrl in your profile's cordis.patch.yml.
+# Unconfigured installs stay inert until both required settings are supplied.
+- insert:
+    - id: remote-preview-resource
+      name: dsh-plugin-remote-preview-resource
+      config: {}

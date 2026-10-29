@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Remote Media Preview",
+    "description": "Play audio and video from a dedicated media directory over the current GUI HTTP endpoint, with remote access and seeking."
+  }
+}

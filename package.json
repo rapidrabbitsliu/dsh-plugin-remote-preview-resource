@@ -1,0 +1,25 @@
+{
+  "name": "dsh-plugin-remote-preview-resource",
+  "version": "0.1.0",
+  "description": "Authenticated HTTP audio/video previews on the existing DSH GUI port",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./client": "./client.js"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "immediately": true, "inject": ["@deepseek-ai/dsh-client-locale"] }
+  },
+  "files": ["src", "client.js", "locale", "README.md", "LICENSE", "cordis.patch.yml"],
+  "repository": { "type": "git", "url": "git+https://github.com/rapidrabbitsliu/dsh-plugin-remote-preview-resource.git" },
+  "homepage": "https://github.com/rapidrabbitsliu/dsh-plugin-remote-preview-resource#readme",
+  "bugs": { "url": "https://github.com/rapidrabbitsliu/dsh-plugin-remote-preview-resource/issues" },
+  "keywords": ["dsh", "deepseek-harness", "plugin", "audio", "video", "remote-preview"],
+  "publishConfig": { "access": "public", "registry": "https://registry.npmjs.org/" },
+  "engines": { "node": ">=22.19" },
+  "scripts": { "test": "node --test test/*.test.js", "test:browser": "node test/browser.cjs", "check": "node --check src/index.js && node --check src/media.js && node --check client.js" },
+  "license": "MIT"
+}
